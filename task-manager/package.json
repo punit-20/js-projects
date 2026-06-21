@@ -1,0 +1,15 @@
+{
+  "name": "task-manager-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "node test-tasks.js"
+  },
+  "dependencies": {
+    "axios": "^1.18.0",
+    "concurrently": "^8.2.2"
+  }
+}
