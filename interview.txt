@@ -1,0 +1,241 @@
+================================================================================
+🎓 PORTFOLIO INTERVIEW PREPARATION GUIDE
+================================================================================
+This guide contains prep questions covering all core concepts, architectures,
+and technologies used in your 4 full-stack JavaScript projects, plus Git.
+Use this to prepare for your technical interview tomorrow. Good luck!
+================================================================================
+
+📌 TABLE OF CATEGORIES
+--------------------------------------------------------------------------------
+1. JavaScript Core & Runtime (Node.js/V8) [1-25]
+2. React.js Frontend & State Management [26-55]
+3. Node.js & Express REST APIs [56-85]
+4. WebSockets & Real-Time Communication (Socket.io) [86-110]
+5. Databases (MongoDB & In-Memory Fallbacks) [111-135]
+6. Web Security, Auth & JWT [136-155]
+7. Version Control with Git & Collaboration [156-175]
+8. Project Architecture & Scenario-Based Questions [176-190]
+
+================================================================================
+SECTION 1: JAVASCRIPT CORE & RUNTIME (NODE.JS/V8)
+================================================================================
+Q1: Explain the difference between 'let', 'const', and 'var' in terms of scoping.
+Q2: What is the event loop in JavaScript and how does it handle asynchronous code?
+Q3: What are the differences between Microtasks (e.g. Promises) and Macrotasks (e.g. setTimeout)?
+Q4: What is a closure in JavaScript, and how can it lead to memory leaks if mismanaged?
+Q5: Explain the concept of 'hoisting' and how JavaScript variables/functions are initialized.
+Q6: What is the 'this' keyword in JavaScript and how does its value change in arrow functions?
+Q7: What is the difference between '==' and '==='?
+Q8: Explain the difference between Synchronous and Asynchronous programming.
+Q9: What are Promises? What are their three states?
+Q10: What is the benefit of using 'async/await' over standard Promise chaining?
+Q11: Explain 'Callback Hell' and how ES6 features solved it.
+Q12: What is the difference between 'null' and 'undefined'?
+Q13: How do array methods like .map(), .filter(), and .reduce() differ?
+Q14: Explain the concept of event bubbling and event capturing.
+Q15: What is prototypal inheritance in JavaScript?
+Q16: What are modules in JavaScript? Compare CommonJS (require) vs ES Modules (import).
+Q17: Explain destructuring assignment in ES6 with an example from your code.
+Q18: What is the spread (...) operator and how did you use it in your React state updates?
+Q19: What is the rest parameter and how does it differ from the spread operator?
+Q20: What are Template Literals, and how do they make string construction simpler?
+Q21: Explain the concept of 'Strict Mode' ('use strict') in JavaScript.
+Q22: What is the purpose of 'Object.freeze()' and how does it differ from 'const'?
+Q23: How does JavaScript handle error propagation, and what is the role of 'try...catch...finally'?
+Q24: What is a Polyfill, and why is it sometimes necessary in web application deployment?
+Q25: What is the differences between shallow copy and deep copy, and how do they impact state management?
+
+================================================================================
+SECTION 2: REACT.JS FRONTEND & STATE MANAGEMENT
+================================================================================
+Q26: What is Vite and why did you choose it over Create React App (CRA)?
+Q27: What is the Virtual DOM and how does React use it to optimize rendering?
+Q28: Explain the React component lifecycle in functional components using Hooks.
+Q29: What is the purpose of 'useState' and how does React schedule state updates?
+Q30: Explain 'useEffect'. How does the dependency array affect when it runs?
+Q31: What happens if you omit the dependency array in 'useEffect'?
+Q32: How do you clean up side-effects in 'useEffect' (e.g. closing a WebSocket connection)?
+Q33: What is the 'useRef' hook and how does it differ from 'useState' in terms of triggering re-renders?
+Q34: How did you use 'useRef' in your Chat App to scroll to the bottom of the messages list?
+Q35: What is 'prop drilling' and how can you avoid it in larger applications?
+Q36: Explain the concept of 'Lifting State Up' in React with an example from your Task Manager.
+Q37: What are Controlled vs Uncontrolled components in React forms?
+Q38: Why is using index values as 'key' props in lists discouraged? What should you use instead?
+Q39: Explain the concept of 'Conditional Rendering' in React.
+Q40: What is the purpose of 'useMemo' and when should you use it?
+Q41: What is 'useCallback' and how does it help prevent unnecessary renders of child components?
+Q42: What is React Context API and when is it preferred over Redux or custom props?
+Q43: What is the difference between state and props in React?
+Q44: Why should you never modify state directly (e.g. state.push(item)) in React?
+Q45: Explain what happens when a component re-renders. Do its children always re-render?
+Q46: What is a React fragment (<>...</>) and why do we use it instead of wrapper <div> tags?
+Q47: What is the purpose of 'StrictMode' in React? Why does it cause hooks to fire twice in development?
+Q48: How do you handle forms in React using onChange handlers?
+Q49: What is Axios and why is it preferred over the browser's native 'fetch' API?
+Q50: How do you handle HTTP errors in React gracefully?
+Q51: How did you implement text search debouncing in the Task Manager frontend?
+Q52: What is CSS glassmorphism, and how do you achieve it using custom CSS variables?
+Q53: How does React router handle navigation, and how does it differ from standard browser navigation?
+Q54: What is responsive web design and how did you implement it in CSS?
+Q55: What are CSS media queries and how did you use them for the layout of your apps?
+
+================================================================================
+SECTION 3: NODE.JS & EXPRESS REST APIS
+================================================================================
+Q56: What is Node.js, and what makes it single-threaded but concurrent?
+Q57: What is Express.js, and what is its role in your full-stack applications?
+Q58: What is middleware in Express, and how does 'next()' work?
+Q59: Explain the difference between Route params (req.params) and Query params (req.query).
+Q60: How did you use Route params vs Query params in your Task Manager API?
+Q61: What is CORS? Why is the 'cors' middleware essential when React and Node run on different ports?
+Q62: Explain the HTTP request lifecycle in Express from client request to server response.
+Q63: What are the main HTTP Methods? Explain GET, POST, PUT, DELETE.
+Q64: What is the difference between PUT and PATCH?
+Q65: What do the following HTTP Status Codes represent: 200, 201, 400, 401, 403, 404, 500?
+Q66: How do you parse JSON request bodies in Express? Explain 'app.use(express.json())'.
+Q67: Explain how you structured error handling middleware in Express.
+Q68: What is 'nodemon' and why is it useful during development?
+Q69: What is 'package.json' and what is the difference between 'dependencies' and 'devDependencies'?
+Q70: What is the purpose of the 'package-lock.json' file?
+Q71: Explain how environment variables (.env) are managed using the 'dotenv' module.
+Q72: What is REST architecture, and what makes an API truly RESTful?
+Q73: How do you handle file uploads in Express? Which middleware is commonly used?
+Q74: Explain the difference between 'app.use()' and 'app.get()' in Express.
+Q75: What is event-driven programming, and how does Node.js utilize EventEmitter?
+Q76: What is NPM, and how do scripts work inside package.json?
+Q77: How do you prevent an Express server from crashing when an unhandled exception occurs?
+Q78: Explain the difference between cluster mode and PM2 in Node.js.
+Q79: What is stream in Node.js, and when is it preferred over reading files into memory?
+Q80: What is the difference between 'res.send()', 'res.write()', and 'res.json()'?
+Q81: Why do we use 'process.exit(1)' instead of 'process.exit(0)' on failures?
+Q82: How did you run the React client and Express server concurrently in development?
+Q83: Explain the package 'concurrently' and how it executes multiple commands.
+Q84: What is a reverse proxy (e.g. Nginx) and why is it used in production Node.js apps?
+Q85: How do you version APIs (e.g. /api/v1/tasks vs /api/v2/tasks)?
+
+================================================================================
+SECTION 4: WEBSOCKETS & REAL-TIME COMMUNICATION (SOCKET.IO)
+================================================================================
+Q86: What is a WebSocket and how does it differ from standard HTTP polling?
+Q87: What is Socket.io, and what transport fallback mechanism does it use?
+Q88: Explain the connection handshake process in WebSockets.
+Q89: How does Socket.io implement 'Rooms' and how did you use them in the Chat App?
+Q90: What is the difference between 'socket.emit()', 'socket.to().emit()', and 'io.to().emit()'?
+Q91: Explain how typing indicators ("X is typing...") are triggered and broadcasted in real-time.
+Q92: Why did you debounce the typing status emit event on the React frontend?
+Q93: How does the server handle user disconnection, and how does it update the online list?
+Q94: What is in-memory history caching and why did the Chat App cache the last 50 messages?
+Q95: What are the security risks associated with open WebSocket endpoints, and how do you secure them?
+Q96: Explain how you clean up socket event listeners in React when a component unmounts.
+Q97: How does Socket.io handle reconnection if the server goes down temporarily?
+Q98: What is the role of 'socket.id' and is it persistent across reconnections?
+Q99: What is sticky sessions in load balancing, and why is it necessary for Socket.io?
+Q100: How do you scale Socket.io across multiple servers? What is the role of Redis Adapter?
+Q101: What is the difference between Socket.io-client and standard native WebSocket browser APIs?
+Q102: How do you pass authentication tokens (like JWT) to Socket.io connections?
+Q103: Explain what 'socket.join(room)' and 'socket.leave(room)' do internally.
+Q104: How did you construct unique avatars/colors for users in the chat room?
+Q105: How does HTTP/2 server push compare to WebSockets?
+Q106: Explain the event emitter pattern in Socket.io.
+Q107: What is backpressure in real-time connections?
+Q108: Why is CORS configuration necessary in Socket.io server initialization?
+Q109: What is heartbeat/ping-pong packet in Socket.io?
+Q110: How do you handle offline/failed deliveries in a chat app?
+
+================================================================================
+SECTION 5: DATABASES (MONGODB & IN-MEMORY FALLBACKS)
+================================================================================
+Q111: What is MongoDB, and what are the main differences between SQL and NoSQL databases?
+Q112: What is a Document, Collection, and Database in MongoDB?
+Q113: What is the BSON format and how does it differ from standard JSON?
+Q114: What is the role of the MongoDB driver (mongodb) in Node.js?
+Q115: What is Mongoose and how does it compare to using the native MongoDB driver?
+Q116: What is an Object ID (_id) in MongoDB? How is it structured?
+Q117: How did you convert string IDs to ObjectIDs when querying documents by parameters?
+Q118: What is the purpose of database indexing, and how does it improve query performance?
+Q119: What is the MongoDB Aggregation Pipeline and when should you use it?
+Q120: Explain the difference between 'insertOne()', 'insertMany()', and 'bulkWrite()'.
+Q121: How do you update documents in MongoDB? Explain '$set', '$push', and '$unset'.
+Q122: What is the difference between 'updateOne()' and 'findOneAndUpdate()'?
+Q123: What does 'returnDocument: after' or 'new: true' do in find and update operations?
+Q124: Explain the connection timeout parameters 'connectTimeoutMS' and 'serverSelectionTimeoutMS'.
+Q125: Why did you set these timeouts to 2000ms instead of using the default 30-second timeouts?
+Q126: What is 'mongodb-memory-server' and how did you use it as a fallback in your servers?
+Q127: What is in-memory fallback databases and why are they useful for CI/CD and testing?
+Q128: Explain how MongoDB handles transactions. Are transactions ACID compliant?
+Q129: What is database normalization vs denormalization? When would you denormalize in MongoDB?
+Q130: What is a replica set in MongoDB, and what is its role in high availability?
+Q131: What is sharding and how does it enable horizontal scalability?
+Q132: How do you secure a MongoDB connection (e.g. database credentials, TLS/SSL)?
+Q133: What is the maximum document size limit in MongoDB, and what option do you have for larger files (GridFS)?
+Q134: How do you run local backups/restores in MongoDB?
+Q135: What is the role of 'dotenv' and 'process.env.MONGO_URI' in configuring database endpoints?
+
+================================================================================
+SECTION 6: WEB SECURITY, AUTH & JWT
+================================================================================
+Q136: What is authentication vs authorization?
+Q137: What is JWT (JSON Web Token)? Explain its three parts: Header, Payload, Signature.
+Q138: Where should you store JWTs on the client-side? Compare LocalStorage vs HttpOnly Cookies.
+Q139: How does JWT verify that a token has not been altered or tampered with by the client?
+Q140: What is a JWT secret key, and why is it dangerous to hardcode it in source repositories?
+Q141: What is token expiration and why is it important for security?
+Q142: What is the difference between Access Tokens and Refresh Tokens?
+Q143: Explain how the JWT Authorization header works (Bearer token format).
+Q144: How did you implement the JWT middleware in the Notes App server?
+Q145: What is bcrypt (or bcryptjs) and why do we use it for hashing passwords instead of MD5/SHA256?
+Q146: What is a 'salt' in password hashing and how does it prevent rainbow table attacks?
+Q147: Explain what an authorization middleware does if the token is missing or expired (status code 401).
+Q148: What is Cross-Site Scripting (XSS) and how does it impact JWT security?
+Q149: What is Cross-Site Request Forgery (CSRF) and how do you protect APIs against it?
+Q150: What is HTTPS, and why is it critical for securing authentication requests?
+Q151: How do you handle password reset tokens securely?
+Q152: What is session-based authentication (cookies/sessions) vs token-based authentication (JWT)?
+Q153: What is the role of helmet middleware in Express security?
+Q154: Explain rate limiting and how it protects APIs from brute-force authentication attacks.
+Q155: What is role-based access control (RBAC), and how can you implement it in Express routes?
+
+================================================================================
+SECTION 7: VERSION CONTROL WITH GIT & COLLABORATION
+================================================================================
+Q156: What is Git, and what is the difference between Git and GitHub?
+Q157: What is the Git staging area and how does it differ from the working directory?
+Q158: Explain the difference between 'git add .' and 'git add -A'.
+Q159: What is a commit in Git, and what makes a commit message "good"?
+Q160: What is the purpose of '.gitignore' and why should node_modules/ or .env never be committed?
+Q161: How do you remove a file from Git tracking that was accidentally committed, without deleting it locally?
+Q162: Explain the difference between 'git push' and 'git pull'.
+Q163: What does the command 'git push -u origin main' or '--set-upstream' do?
+Q164: What is a Git branch and why is branch-based development preferred?
+Q165: What is a merge conflict and how do you resolve it?
+Q166: Explain the difference between 'git merge' and 'git rebase'.
+Q167: What does 'git status' show, and what is the difference between tracked, untracked, and staged files?
+Q168: How do you view commit histories? What options can you pass to 'git log' to customize outputs?
+Q169: What is a Pull Request (PR) and what is the process of code review?
+Q170: Explain 'git diff' and what it does.
+Q171: What is 'git stash' and when would you use it?
+Q172: What is the difference between 'git reset --soft', '--mixed', and '--hard'?
+Q173: What is 'git revert' and how does it differ from 'git reset'?
+Q174: What is a tag in Git, and how is it used to mark production releases?
+Q175: What is a merge commit vs squashing commits?
+
+================================================================================
+SECTION 8: PROJECT ARCHITECTURE & SCENARIO-BASED QUESTIONS
+================================================================================
+Q176: Talk about the overall design of your portfolio workspace. Why did you use concurrently to launch them?
+Q177: In the URL Shortener project, how did you verify that user history stored in cookies/IP never gets lost?
+Q178: If the client changes their network connection, their public IP changes. How did you design local cookie fallbacks?
+Q179: In the Notes App, what happens when a user attempts to fetch or edit a note without a token?
+Q180: How did you implement Note categorization/coloring? Is it managed dynamically?
+Q181: In the Chat App, what happens if the server crashes? Is the chat history lost?
+Q182: How did you handle scroll synchronization in React so the chat feed is always centered?
+Q183: How did you test that the typing indicator doesn't spam Socket.io events?
+Q184: In the Task Manager project, how did the stats board stay up to date when tasks were filtered?
+Q185: Why did you fetch all tasks to calculate counts in the background, rather than using the active filters list?
+Q186: If your local MongoDB database server suddenly stops, how will your Express server respond?
+Q187: How would you scale the Task Manager backend if the number of tasks grew to millions?
+Q188: If you had to add social login (OAuth, e.g. Google Login) to your Notes App, how would you structure the flow?
+Q189: Describe a difficult bug you encountered during the creation of these projects and how you resolved it.
+Q190: If you were deployed to production tomorrow, what configurations or changes would you perform?
+================================================================================
